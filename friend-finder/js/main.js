@@ -2,13 +2,9 @@
 window.addEventListener("load", function(e){
 
     const select = document.querySelector("#friends")
-    fetch("../friends.json")
-    .then(function(reso){
-        return reso.json();
-    })
-    .then(function(fdata){
-        console.log(fdata);
-    })
+    fetch('../friends.json')
+    .then(res => res.json())
+    .then(data => console.log(data));
 
     function setup(){
         loadJSON("file:///C:/Users/kamal/OneDrive/Documents/GitHub/ASSIGNMENT-FRIENDFINDER/friend-finder/friends/friends.json", gotdata, 'jsonp')
@@ -18,6 +14,6 @@ window.addEventListener("load", function(e){
     }
     console.log(setup)
 
-    
+     
 
 })
